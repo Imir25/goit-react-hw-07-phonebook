@@ -26,9 +26,3 @@ export const handlePending = state => {
     state.items.splice(index, 1);
   };
   
-  export const handleUpdateFullfiled = (state, { payload }) => {
-    state.isLoading = false;
-    state.error = null;
-    const index = state.items.findIndex(contact => contact.id === payload.id);
-    state.items[index] = payload;
-  };
